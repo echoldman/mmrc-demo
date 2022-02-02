@@ -1,4 +1,6 @@
-# e-demo
+# mmrc-demo
+
+This project is a demo project for [mmrc](https://github.com/echoldman/mmrc)
 
 ## Project setup
 ```
