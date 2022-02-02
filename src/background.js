@@ -30,7 +30,8 @@ async function createWindow () {
     }
   })
 
-  const mmrcMain = new MMRCMain('mmrc.main.call.method', 'mmrc.renderer.done', 'mmrc.renderer.failed', ipcMain, win)
+  // const mmrcMain = new MMRCMain(ipcMain, win, 'mmrc.main.call.method', 'mmrc.renderer.done', 'mmrc.renderer.failed')
+  const mmrcMain = new MMRCMain(ipcMain, win)
   mmrcMain.addMethod(hello, 'hello')
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {

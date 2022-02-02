@@ -10,7 +10,8 @@ import { ipcRenderer } from 'electron'
 import HelloWorld from './components/HelloWorld.vue'
 
 const MMRCRenderer = require('mmrc/renderer')
-const mmrc = new MMRCRenderer('mmrc.main.call.method', 'mmrc.renderer.done', 'mmrc.renderer.failed', ipcRenderer)
+const mmrc = new MMRCRenderer(ipcRenderer)
+// const mmrc = new MMRCRenderer(ipcRenderer, 'mmrc.main.call.method', 'mmrc.renderer.done', 'mmrc.renderer.failed')
 
 export default {
   name: 'App',
